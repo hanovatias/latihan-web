@@ -1,6 +1,19 @@
-let jumlahKlik = 0;
-        function pencetTombol() {
-            jumlahKlik = jumlahKlik + 1;
-            document.getElementById('hasil').innerHTML = 
-            'ANJIR BISA BRO 🔥 Udah diklik ' + jumlahKlik + 'x';
-        }
+// 1. cek dulu: ada data lama di localstorage gak? kalau gak ada, mulai dari
+let jumlahklik = parseInt(localStorage.getItem('jumlahklikHano')) ||0;
+
+// 2. pas pertama buka web , langsung tampil angka terakhir 
+tampilkanhasil();
+
+function pencetTombol() {
+    jumlahklik++; // +1
+    // 3. simpan angka terbaru ke memori browser
+    localStorage.setItem('jumlahklikHano',jumlahklik);
+    tampilkanhasil();
+}
+
+function tampilkanhasil() {
+    document.getElementById('hasil').innerHTML = 
+    'ANJIR BISA BRO 🔥 udah diklik' + jumlahklik + 'x';
+}
+
+
