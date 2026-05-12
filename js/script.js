@@ -17,3 +17,17 @@ function tampilkanhasil() {
 }
 
 
+function kurangtombol() {
+    // biar tidak minus minimal 0
+    if (jumlahklik > 0) {
+    jumlahklik--;
+    localStorage.setItem('jumlahklikHano',jumlahklik);
+    tampilkanhasil();
+}
+}
+
+function resettombol() {
+    jumlahklik = 0
+    localStorage.setItem('jumlahklikhano',jumlahklik);
+    tampilkanhasil();
+}

@@ -21,6 +21,18 @@
             background-color: #2ea043;
             transform: scale(1.05);
         }
+        button:nth-of-type(2) {
+            background-color: #e40a1c;
+        }
+         button:nth-of-type(2):hover {
+            background-color: #58a6ff;
+        }
+         button:nth-of-type(3) {
+            background-color: rgb(236, 104, 15);
+        }
+         button:nth-of-type(3):hover {
+            background-color:rgb(17, 236, 145);
+        }
         #hasil {
             margin-top: 20px;
             font-size: 20px;
