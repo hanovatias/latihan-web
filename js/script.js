@@ -13,7 +13,16 @@ function pencetTombol() {
 
 function tampilkanhasil() {
     document.getElementById('hasil').innerHTML = 
-    'ANJIR BISA BRO 🔥 udah diklik' + jumlahklik + 'x';
+        'ANJIR BISA BRO 🔥 udah diklik ' + jumlahklik + ' x';
+
+    // KODE BARU DI BAWAH INI - TINGGAL TEMPEL
+    let level = "Pemula";
+    if (jumlahklik >= 100) level = "Dewa Clicker";
+    else if (jumlahklik >= 50) level = "Sultan Klik";
+    else if (jumlahklik >= 20) level = "Jagoan Klik";
+    else if (jumlahklik >= 10) level = "Amatir";
+    
+    document.getElementById('level').innerHTML = "Level: " + level;
 }
 
 
@@ -26,8 +35,8 @@ function kurangtombol() {
 }
 }
 
-function resettombol() {
+function resettombol_baru() {
     jumlahklik = 0
-    localStorage.setItem('jumlahklikhano',jumlahklik);
+    localStorage.setItem('jumlahklikHano',jumlahklik);
     tampilkanhasil();
 }
